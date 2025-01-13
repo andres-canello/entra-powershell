@@ -58,8 +58,8 @@ $application = Get-EntraBetaApplication -Filter "DisplayName eq '<GlobalSecureAc
 $params = @{
     ApplicationId = $application.Id
     DestinationHost = '192.168.1.100..192.168.1.110'
-    Ports = '22,3389'
-    Protocol = 'TCP,UDP'
+    Ports = '22','3389'
+    Protocol = 'TCP','UDP'
     DestinationType = 'ipRange'
 }
 New-EntraBetaPrivateAccessApplicationSegment @params
